@@ -1,0 +1,53 @@
+/* تأكد من تنسيق الـ Navbar بشكل صحيح */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .left-section {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .right-section {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .left-section a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+  
+  .arrow-down {
+    margin-left: 5px;
+  }
+  @media (max-width: 767px) {
+    .right-section {
+     display: none;
+      }
+  }  
+  @media (min-width: 768px) and (max-width: 1024px){
+    .right-section {
+        display: none;
+         }
+  }

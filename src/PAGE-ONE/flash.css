@@ -1,0 +1,119 @@
+.row{
+    align-items: center;
+}
+.ELSORA-PEHWARTHA {
+    position: relative;
+    display: inline-block;
+}
+.ELSORA-PEHWARTHA  img {
+   
+}
+#PLAYSTATION,#DISCOUNT,#SCREEN,#CHAIR{
+    display: block;
+    justify-content: center;
+  
+  
+}
+.HEART,
+.EYE {
+    position: absolute;
+    background-color: white;
+padding: 1px;
+    border-radius: 50%;
+}
+.HEART:hover,
+.EYE :hover {
+  
+    background-color: rgb(0, 0, 0);
+    color: #F5F5F5;
+padding: 2px;
+
+}
+.HEART {
+    top: 10px;
+ right: 5px;
+}
+
+.EYE {
+    top: 30px;
+    right: 5px;
+}
+.ELSORA-PEHWARTHA{
+    background: #F5F5F5;
+    width: 100%;
+  align-items: center;
+    height:100%;
+
+}
+.TAHT-ELSORA h5{
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+.TAHT-ELSORA h6{
+color:#DB4444 ;
+
+
+}
+.TAHT-ELSORA span{
+
+color: #787777;
+
+
+}
+.TAHT-ELSORA small{
+    color: #787777;
+
+}
+.star{
+    color: #FFAD33;
+
+
+}
+.View{
+    background: #DB4444;
+color: #F5F5F5;
+outline: none;
+border-radius: 5px;
+padding: 10px;
+transition: transform 0.3s ease,  0.3s ease; /* إضافة انتقال لتأثير التحويم والضغط */
+
+border: none;
+
+}
+.View:active {
+    transform: scale(1.1); /* تكبير الزر عند الضغط */
+    background: #DB4444;
+
+}
+.View:hover{
+    color: black;
+   
+}
+
+.ELSORA-PEHWARTHA {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F5F5;
+    width: 100%;
+    height: 200px; /* تحديد الارتفاع المناسب للخلفية */
+    overflow: hidden; /* للتأكد من عدم تجاوز الصورة للكارت */
+  }
+  
+  .ELSORA-PEHWARTHA img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* لضمان أن الصورة تتناسب داخل الخلفية بدون تشويه */
+  }
+  .DISCOUNT{
+    top: 0;
+    position: absolute;
+    left: 5px;
+  }  
+  .LIKED{
+  color: #DB4444;
+  }
+
+ 
