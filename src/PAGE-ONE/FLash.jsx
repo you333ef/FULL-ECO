@@ -9,8 +9,11 @@ import { FaEye } from "react-icons/fa";
 import Discountpercent from '../assets/Discountpercent.svg';
 import { FaStar } from "react-icons/fa6";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const FLash = () => {
+const Flash = () => {
   const [likedItems, setLikedItems] = useState([false, false, false, false]);
 
   const handleLikeClick = (index) => {
@@ -58,14 +61,49 @@ const FLash = () => {
     }
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    nextArrow: <div className="slick-next"><i className="fa fa-arrow-right"></i></div>,
+    prevArrow: <div className="slick-prev"><i className="fa fa-arrow-left"></i></div>,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+    ]
+  };
+
   return (
     <div className='container'>
-      <div className="row">
+      <Slider {...settings}>
         {products.map((product, index) => (
-          <div key={product.id} className="col-lg-3 col-sm-10 col-md-6">
+          <div key={product.id} className="product-card">
             <div className="ELSORA-PEHWARTHA">
               <img src={Discountpercent} alt="" className='DISCOUNT' />
-              <img src={product.img} alt={product.name} className='d-block m-auto' id={product.name} />
+              <img src={product.img} alt={product.name} className='ELSORA-PEHWARTHA' />
               {likedItems[index] ? (
                 <FaHeart
                   onClick={() => handleLikeClick(index)}
@@ -90,10 +128,10 @@ const FLash = () => {
             </div>
           </div>
         ))}
-      </div>
-      <button className='d-block m-auto mt-5 View'>View All Products</button>
+      </Slider>
+      <button className='View d-block m-auto mt-5'>View All Products</button>
     </div>
   );
 }
 
-export default FLash;
+export default Flash;
