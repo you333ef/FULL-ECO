@@ -104,6 +104,7 @@ const Flash = () => {
             <div className="ELSORA-PEHWARTHA">
               <img src={Discountpercent} alt="" className='DISCOUNT' />
               <img src={product.img} alt={product.name} className='ELSORA-PEHWARTHA' />
+              <button className="add-to-cart">Add To Cart</button>
               {likedItems[index] ? (
                 <FaHeart
                   onClick={() => handleLikeClick(index)}
