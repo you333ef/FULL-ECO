@@ -1,40 +1,40 @@
+.navbar {
+  position: relative; /* تأكد من أن الـ Navbar ليس ثابتاً */
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  width: 100%; /* تأكد من أن الحاوية تمتد على عرض الصفحة بالكامل */
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  justify-content: space-between; /* تأكد من توزيع العناصر بشكل متساوي */
+}
+
 .navbar-nav .nav-link {
-    margin-right: 20px;
-  }
-  
-  .form-control {
-    max-width: 300px;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
-  }
-  
-  .navbar-nav .nav-link {
-    font-size: 1rem;
-  }
-  
-  .navbar-collapse {
-    justify-content: space-between;
-  }
-.RR{
-    color: black !important;
-}  
-.NNN{
-    margin-left: auto;
-    margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  color: black !important;
-  flex-direction: column;
+  margin-right: 20px;
+  color: #000; /* تأكد من أن النص داخل الروابط باللون الأسود */
 }
-#Exclusive{
-    font-size: 30px;
+
+.form-control {
+  max-width: 300px;
+  margin-right: 10px; /* تأكد من وجود مسافة بين حقل البحث والزر */
 }
-#LL{
-font-size: 16px;
-font-weight: 700;
+
+#Exclusive {
+  font-size: 30px;
+  color: #000; /* تأكد من أن النص باللون الأسود */
 }
-#HEART,#CARTT{
-    font-size: 22px;
+
+#LL {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000; /* تأكد من أن النص باللون الأسود */
+}
+
+#HEART, #CARTT {
+  font-size: 22px;
+  color: #000; /* تأكد من أن الأيقونات باللون الأسود */
 }
