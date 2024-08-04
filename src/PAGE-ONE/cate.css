@@ -1,0 +1,41 @@
+.arrow-icon {
+    font-size: 24px; /* حجم الأيقونات */
+    color: #000; /* لون الأيقونات */
+    margin: 0 10px; /* مسافة بين الأيقونات */
+  }
+  
+  #DIRECTIONS {
+    display: flex;
+    justify-content: center; /* لمحاذاة الأيقونات في الوسط */
+    align-items: center;
+  }
+  .arrow-icon{
+    padding: 5px;
+    background: #F5F5F5;
+    border-radius: 50px;
+  }
+  .PHONE,.COMPUTER,.WATCH,.CAMERA,.HEADPHONE,.GAMING{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+  .CAMERA{
+    background: #DB4444;
+    color: #F5F5F5;
+}
+.CONTACT h6{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.CONTACT img{
+    font-size: 500px;
+}
+.PHONE:hover,.COMPUTER:hover,.WATCH:hover,.HEADPHONE:hover,.GAMING:hover{
+    background: #DB4444;
+    transition: 1s;
+    color: #F5F5F5;
+  }
+ 

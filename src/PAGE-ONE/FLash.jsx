@@ -15,11 +15,24 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Flash = () => {
   const [likedItems, setLikedItems] = useState([false, false, false, false]);
+  const [favoriteItems, setFavoriteItems] = useState([]);
 
   const handleLikeClick = (index) => {
     const newLikedItems = [...likedItems];
     newLikedItems[index] = !newLikedItems[index];
     setLikedItems(newLikedItems);
+
+    const likedProduct = products[index];
+
+    let updatedFavorites;
+    if (newLikedItems[index]) {
+      updatedFavorites = [...favoriteItems, likedProduct];
+    } else {
+      updatedFavorites = favoriteItems.filter(item => item.id !== likedProduct.id);
+    }
+
+    setFavoriteItems(updatedFavorites);
+    localStorage.setItem('favoriteItems', JSON.stringify(updatedFavorites));
   };
 
   const products = [
@@ -30,7 +43,7 @@ const Flash = () => {
       price: '$120',
       oldPrice: '$160',
       rating: 4.5,
-      reviews: '80$',
+      reviews: '80',
     },
     {
       id: 1,
@@ -39,7 +52,7 @@ const Flash = () => {
       price: '$120',
       oldPrice: '$160',
       rating: 5,
-      reviews: '70$',
+      reviews: '70',
     },
     {
       id: 2,
@@ -48,7 +61,7 @@ const Flash = () => {
       price: '$120',
       oldPrice: '$160',
       rating: 4.5,
-      reviews: '87$',
+      reviews: '87',
     },
     {
       id: 3,
@@ -57,7 +70,7 @@ const Flash = () => {
       price: '$120',
       oldPrice: '$160',
       rating: 5,
-      reviews: '60$',
+      reviews: '60',
     }
   ];
 
@@ -131,6 +144,7 @@ const Flash = () => {
         ))}
       </Slider>
       <button className='View d-block m-auto mt-5'>View All Products</button>
+      <hr  className='mt-5'/>
     </div>
   );
 }

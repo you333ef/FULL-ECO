@@ -2,8 +2,18 @@ import React from 'react';
 import { Navbar, Container, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { FaSearch, FaHeart, FaShoppingCart } from 'react-icons/fa';
 import './nav.css'; // تأكد من وجود ملف الأنماط في نفس المجلد
+import { useNavigate } from 'react-router-dom';
 
 const NAV = () => {
+  const navigate=useNavigate()
+  const ELTAWGEH = () =>{
+       navigate('/CART');
+
+  }
+  const ELQUALP= () =>{
+    navigate('/HEART');
+
+}
   return (
     <Navbar expand="lg" className="bg-white border-bottom container-fluid">
       <Container fluid>
@@ -29,10 +39,10 @@ const NAV = () => {
           </Form>
           <Nav className="d-flex align-items-center ms-3">
             <Nav.Link href="#wishlist">
-              <FaHeart className='text-dark' id='HEART' />
+              <FaHeart className='text-dark' onClick={ELQUALP} id='HEART' />
             </Nav.Link>
             <Nav.Link href="#cart">
-              <FaShoppingCart className='text-dark' id='CARTT' />
+              <FaShoppingCart onClick={ELTAWGEH} className='text-dark' id='CARTT' />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

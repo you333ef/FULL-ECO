@@ -10,34 +10,34 @@
   align-items: center;
   padding: 10px 20px;
   z-index: 1000;
+ 
 }
-.left-section a{
+
+.left-section a {
   color: #fff;
 }
+
 .navbar-content {
- 
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
 }
 
 .left-section {
   flex: 1;
   text-align: center;
   font-size: 14px;
- 
 }
 
 .right-section {
   font-size: 14px;
   white-space: nowrap;
- 
 }
 
 .left-section a {
- columns: #fff;
- 
+  color: #fff;
   text-decoration: none;
   margin-left: 5px;
   font-weight: bold;
@@ -48,13 +48,22 @@
 }
 
 @media (max-width: 767px) {
+  
   .right-section {
-      display: block; /* تأكد من إظهار هذه الجزئية بدلاً من إخفائها */
+    display: block;
+    font-size: 12px; /* تقليل حجم الخط إذا لزم الأمر */
+  }
+  .right-section{
+    display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
   .right-section {
-      display: block; /* تأكد من إظهار هذه الجزئية بدلاً من إخفائها */
+    display: block;
   }
 }
