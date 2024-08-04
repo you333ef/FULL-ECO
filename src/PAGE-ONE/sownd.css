@@ -1,0 +1,140 @@
+.containereeeee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 67vh;
+    border-radius: 40px;
+    background-color: #000;
+}
+
+.content #Enhance {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.rowwwwww {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.LEFTTTT {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    order: 1; /* ترتيب العنصر بشكل افتراضي */
+}
+
+.LEFTTTT h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.time-unit span {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.time-unit p {
+    margin: 0;
+    font-size: 0.6em;
+    font-weight: 600;
+}
+
+.buy-now {
+    background: #00FF66;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.RIGHTTTT {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 50px;
+    overflow: hidden;
+    order: 2; /* ترتيب العنصر بشكل افتراضي */
+}
+
+.RIGHTTTT img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* استعلامات الوسائط لتغيير ترتيب العناصر على الشاشات الصغيرة والمتوسطة */
+@media (max-width: 768px) {
+    .LEFTTTT {
+        order: 2; /* ترتيب العنصر ليظهر بعد الصورة */
+        align-items: center; /* توسيط العناصر في الشاشات الصغيرة */
+        text-align: center; /* توسيط النص */
+    }
+
+    .RIGHTTTT {
+        order: 1; /* ترتيب العنصر ليظهر أولًا */
+    }
+
+    .timer {
+        justify-content: center; /* توسيط العداد */
+    }
+    .RIGHTTTT{
+        margin-bottom: 20px;
+    }
+    .RIGHTTTT img {
+        max-width: 70%;
+        height: auto;
+    }
+
+    .content #Enhance {
+        font-size: 24px; /* تكبير حجم الخط قليلاً في الشاشات الصغيرة */
+    }
+}
+
+@media (max-width: 480px) {
+    .timer {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .time-unit {
+        width: 40px;
+        height: 40px;
+    }
+
+    .time-unit span {
+        font-size: 0.8em;
+    }
+
+    .time-unit p {
+        font-size: 0.5em;
+    }
+}

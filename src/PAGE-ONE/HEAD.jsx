@@ -5,6 +5,8 @@ import COUNT from './COUNT';
 import FLash from './FLash';
 import CATEGORY from './CATEGORY';
 import BEST from './BEST';
+import SOWND from './SOWND';
+import Explore from './Explore';
 const HEAD = () => {
   return (
     <div className="container-fluid container">
@@ -32,6 +34,8 @@ const HEAD = () => {
       <FLash/>
       <CATEGORY/>
       <BEST/>
+      <SOWND/>
+      <Explore/>
 
     </div>
   );
