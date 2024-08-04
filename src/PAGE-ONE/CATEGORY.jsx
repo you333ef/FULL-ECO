@@ -17,7 +17,7 @@ const CATEGORY = () => {
           <div className="RIGHT">
             <div className="">
               <img src={FRAME} alt="" className='Framme' />
-              <h4 className='Browse'>Browse By Category</h4>
+              <h4 className='Best'>Browse By Category</h4>
             </div>
           </div>
         </div>
@@ -67,6 +67,7 @@ const CATEGORY = () => {
 </div>
 
       </div>
+      <hr className='mt-5' />
     </div>
   );
 }

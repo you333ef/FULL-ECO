@@ -10,7 +10,7 @@ const COUNT = () => {
   const renderer = ({ days, hours, minutes, seconds }) => {
     return (
       <div className="container WOWOWOWWOWO">
-        <div className="header">
+        <div className="header ">
           <div className="flash-sales">
             <div className="OWOW">
               <div className="flash-sales-icon"></div>
@@ -18,8 +18,8 @@ const COUNT = () => {
             </div>
             <h1 className='Flash'>Flash Sales</h1>
           </div>
-          <div className="countdown">
-            <div className="countdown-item">
+          <div className="countdown ">
+            <div className="countdown-item container">
               <span className="label">Days</span>
               <span className="value">{String(days).padStart(2, '0')}</span>
             </div>

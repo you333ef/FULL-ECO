@@ -4,6 +4,7 @@ import PHOTO from '../assets/Frame 560.svg';
 import COUNT from './COUNT';
 import FLash from './FLash';
 import CATEGORY from './CATEGORY';
+import BEST from './BEST';
 const HEAD = () => {
   return (
     <div className="container-fluid container">
@@ -30,6 +31,7 @@ const HEAD = () => {
       <COUNT/>
       <FLash/>
       <CATEGORY/>
+      <BEST/>
 
     </div>
   );

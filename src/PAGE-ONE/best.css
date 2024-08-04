@@ -1,0 +1,93 @@
+.All {
+    color: #fff;
+    background: #DB4444;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    width: 120px;
+    font-weight: 600;
+    height: 40px;
+    background: #DB4444;
+    color: #F5F5F5;
+    outline: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, 0.3s ease;
+}
+
+.All:active {
+    transform: scale(1.1);
+}
+
+.All:hover {
+    color: black;
+    transition: 1s;
+}
+
+.Best {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.image {
+    padding: 20px;
+    position: relative;
+}
+
+.image img {
+    max-width: 100%;
+}
+
+.icons {
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    color: #000;
+}
+
+.icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.under {
+    margin-top: 10px;
+}
+
+.under p {
+    margin: 0;
+}
+
+.under p span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.stars {
+    color: #FFD700; /* لون النجوم */
+    margin: 5px 0;
+}
+
+.image:hover .icons {
+    display: flex;
+}
+
+.image .icons {
+    display: none;
+    position: absolute;
+}
+
+.jacket {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jacket:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
