@@ -119,22 +119,3 @@
     }
 }
 
-@media (max-width: 480px) {
-    .timer {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .time-unit {
-        width: 40px;
-        height: 40px;
-    }
-
-    .time-unit span {
-        font-size: 0.8em;
-    }
-
-    .time-unit p {
-        font-size: 0.5em;
-    }
-}
