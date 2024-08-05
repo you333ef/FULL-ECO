@@ -9,7 +9,8 @@ const COUNT = () => {
  
   const renderer = ({ days, hours, minutes, seconds }) => {
     return (
-      <div className="container WOWOWOWWOWO">
+      <div className="container">
+         <div className=" WOWOWOWWOWO">
         <div className="header ">
           <div className="flash-sales">
             <div className="OWOW">
@@ -41,6 +42,9 @@ const COUNT = () => {
           </div>
         </div>
       </div>
+      </div>
+
+     
     );
   };
 
