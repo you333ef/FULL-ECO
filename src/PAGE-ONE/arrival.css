@@ -1,0 +1,26 @@
+.part-top{
+    display: flex;
+    flex-direction: column;
+}
+.part-top h5{
+    font-weight: 700;
+    list-style-type: 1px;
+    font-size: 22px;
+}
+
+.FFFFFFFFFFF img{
+    cursor: pointer;
+    width: 90%;
+    height: 10%;
+   
+}
+.LEFTEND{
+  
+    width: Hug (1,170px)px;
+height: Hug (768px)px;
+top: 4253px;
+left: 135px;
+gap: 60px;
+opacity: 0px;
+
+}

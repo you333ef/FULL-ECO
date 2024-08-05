@@ -7,6 +7,9 @@ import CATEGORY from './CATEGORY';
 import BEST from './BEST';
 import SOWND from './SOWND';
 import Explore from './Explore';
+import Arrival from './Arrival';
+import SERVICES from './SERVICES';
+import FOOTER from './FOOTER';
 const HEAD = () => {
   return (
     <div className="container-fluid container">
@@ -36,6 +39,9 @@ const HEAD = () => {
       <BEST/>
       <SOWND/>
       <Explore/>
+      <Arrival/>
+      <SERVICES/>
+      <FOOTER/>
 
     </div>
   );

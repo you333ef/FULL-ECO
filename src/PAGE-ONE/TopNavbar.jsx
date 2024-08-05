@@ -3,7 +3,7 @@ import './topnav.css';
 
 const TopNavbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar For">
       <div className="navbar-content">
         <span className="left-section">
           Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 

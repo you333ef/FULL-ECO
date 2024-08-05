@@ -1,0 +1,68 @@
+/* footer.css */
+.footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .subscribe-form input {
+    border-radius: 0;
+  }
+  
+  .subscribe-form button {
+    border-radius: 0;
+  }
+  
+  .qr-code {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  .app-store {
+    width: 100px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+.VDVDVDD h5{
+    font-weight: 700;
+}  
+.VDVDVDD p{
+    color: #000;
+    font-weight: 500;
+}
+.footer a {
+    text-decoration: none; /* إزالة الخطوط تحت الروابط */
+    color: white; /* تعيين لون النص */
+    font-weight: 600;
+  }
+  #iconttt{
+    font-size: 25px;
+    justify-content:space-around;
+  }
+  .footer-bottom p{
+    font-weight: 700;
+  }
+  
+  .footer a:hover {
+    text-decoration: none; /* التأكد من عدم وجود خط تحت الروابط عند التحويم */
+    color: lightgray; /* يمكنك تغيير لون النص عند التحويم إذا أردت */
+  }
+  
+  .footer ul {
+    list-style-type: none; /* إزالة النقاط من القوائم */
+    padding: 0; /* إزالة الهوامش الداخلية */
+  }
+  
+  .footer ul li {
+    margin-bottom: 10px; /* تعيين مسافة بين العناصر إذا أردت */
+  }
+  
+  .footer ul li a {
+    display: block; /* جعل الروابط تعمل كعناصر كتلة لضمان تغطية كامل مساحة العنصر */
+    color: inherit; /* توريث لون النص من العناصر الأبوية */
+  }
+  

@@ -1,7 +1,10 @@
+/* topnav.css */
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
+  
   width: 100%;
   background-color: #000 !important;
   color: #fff;
@@ -10,8 +13,11 @@
   align-items: center;
   padding: 10px 20px;
   z-index: 1000;
- 
 }
+.For{
+  display: none !important;
+}
+
 
 .left-section a {
   color: #fff;
@@ -22,7 +28,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
 }
 
 .left-section {
@@ -48,12 +53,7 @@
 }
 
 @media (max-width: 767px) {
-  
   .right-section {
-    display: block;
-    font-size: 12px; /* تقليل حجم الخط إذا لزم الأمر */
-  }
-  .right-section{
     display: none;
   }
 }
@@ -65,5 +65,66 @@
 
   .right-section {
     display: block;
+  }
+}
+
+/* nav.css */
+
+.navbar {
+  position: relative; /* تأكد من أن الـ Navbar ليس ثابتاً */
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  width: 100%; /* تأكد من أن الحاوية تمتد على عرض الصفحة بالكامل */
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  justify-content: space-between; /* تأكد من توزيع العناصر بشكل متساوي */
+}
+
+.navbar-nav .nav-link {
+  margin-right: 20px;
+  color: #000; /* تأكد من أن النص داخل الروابط باللون الأسود */
+}
+
+.form-control {
+  max-width: 300px;
+  margin-right: 10px; /* تأكد من وجود مسافة بين حقل البحث والزر */
+}
+
+#Exclusive {
+  font-size: 30px;
+  color: #000; /* تأكد من أن النص باللون الأسود */
+}
+
+#LL {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000; /* تأكد من أن النص باللون الأسود */
+}
+
+#HEART, #CARTT {
+  font-size: 22px;
+  color: #000; /* تأكد من أن الأيقونات باللون الأسود */
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .nav-link {
+    margin-right: 10px; /* تقليل المسافة بين الروابط في الشاشات الصغيرة */
+  }
+  .form-control {
+    max-width: 200px; /* تقليل عرض حقل البحث في الشاشات الصغيرة */
+  }
+  #Exclusive {
+    font-size: 24px; /* تقليل حجم النص في الشاشات الصغيرة */
+  }
+  #LL {
+    font-size: 14px; /* تقليل حجم النص في الشاشات الصغيرة */
+  }
+  #HEART, #CARTT {
+    font-size: 20px; /* تقليل حجم الأيقونات في الشاشات الصغيرة */
   }
 }
