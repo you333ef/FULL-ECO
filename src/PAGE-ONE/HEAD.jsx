@@ -13,7 +13,8 @@ import FOOTER from './FOOTER';
 
 const HEAD = () => {
   return (
-    <div className="main-container">
+    <div className="container">
+      <div className="main-container">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-3 d-none d-md-block">
@@ -45,6 +46,7 @@ const HEAD = () => {
         <SERVICES />
         <FOOTER />
       </div>
+    </div>
     </div>
   );
 }
