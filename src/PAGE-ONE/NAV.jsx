@@ -15,7 +15,8 @@ const NAV = () => {
 
 }
   return (
-    <Navbar expand="lg" className="bg-white border-bottom container-fluid">
+   <div className="container">
+ <Navbar expand="lg" className="bg-white border-bottom container-fluid">
       <Container fluid>
         <Navbar.Brand href="#" className="fw-bold" id='Exclusive'>Exclusive</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -48,6 +49,8 @@ const NAV = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
+   </div>
   );
 };
 

@@ -12,7 +12,8 @@ import SERVICES from './SERVICES';
 import FOOTER from './FOOTER';
 const HEAD = () => {
   return (
-    <div className="container-fluid container">
+    <div className="container">
+<div className="container-fluid container">
       <div className="row">
         <div className="col-md-3 d-none d-md-block ">
           <div className="list-group">
@@ -42,6 +43,9 @@ const HEAD = () => {
       <Arrival/>
       <SERVICES/>
       <FOOTER/>
+
+    </div>
+
 
     </div>
   );
