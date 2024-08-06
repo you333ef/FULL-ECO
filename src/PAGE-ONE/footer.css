@@ -65,4 +65,21 @@
     display: block; /* جعل الروابط تعمل كعناصر كتلة لضمان تغطية كامل مساحة العنصر */
     color: inherit; /* توريث لون النص من العناصر الأبوية */
   }
+  @media screen and (max-width: 767px){
+    .social-icons  {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: center;
+        text-align: center;
+
+      }
+  }
   
+  .footer {
+    padding-left: 0 !important; /* أو القيمة اللي تحبها */
+  }
+  .KKK{
+    display: flex;
+    flex-direction: column;
+  }

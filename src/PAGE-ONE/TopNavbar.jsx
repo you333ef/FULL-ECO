@@ -6,8 +6,8 @@ const TopNavbar = () => {
     <div className="navbar For">
       <div className="navbar-content">
         <span className="left-section">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 
-          <a href="#shopnow">ShopNow</a>
+      
+          <a href="#shopnow"> Disccount Free Express Delivery - OFF 50%! ShopNow</a>
         </span>
         <span className="right-section">
           English <i className="arrow-down"></i>

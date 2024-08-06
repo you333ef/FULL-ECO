@@ -13,40 +13,42 @@ import FOOTER from './FOOTER';
 
 const HEAD = () => {
   return (
-    <div className="container">
-      <div className="main-container">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-3 d-none d-md-block">
-            <div className="list-group">
-              <a href="#" className="list-group-item list-group-item-action">Woman's Fashion</a>
-              <a href="#" className="list-group-item list-group-item-action">Men's Fashion</a>
-              <a href="#" className="list-group-item list-group-item-action">Electronics</a>
-              <a href="#" className="list-group-item list-group-item-action">Home & Lifestyle</a>
-              <a href="#" className="list-group-item list-group-item-action">Medicine</a>
-              <a href="#" className="list-group-item list-group-item-action">Sports & Outdoor</a>
-              <a href="#" className="list-group-item list-group-item-action">Baby's & Toys</a>
-              <a href="#" className="list-group-item list-group-item-action">Groceries & Pets</a>
-              <a href="#" className="list-group-item list-group-item-action">Health & Beauty</a>
+    <div>
+      <div className="STYLING">
+        <div className="main-container">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-md-3 d-none d-md-block">
+                <div className="list-group">
+                  <a href="#" className="list-group-item list-group-item-action">Woman's Fashion</a>
+                  <a href="#" className="list-group-item list-group-item-action">Men's Fashion</a>
+                  <a href="#" className="list-group-item list-group-item-action">Electronics</a>
+                  <a href="#" className="list-group-item list-group-item-action">Home & Lifestyle</a>
+                  <a href="#" className="list-group-item list-group-item-action">Medicine</a>
+                  <a href="#" className="list-group-item list-group-item-action">Sports & Outdoor</a>
+                  <a href="#" className="list-group-item list-group-item-action">Baby's & Toys</a>
+                  <a href="#" className="list-group-item list-group-item-action">Groceries & Pets</a>
+                  <a href="#" className="list-group-item list-group-item-action">Health & Beauty</a>
+                </div>
+              </div>
+              <div className="col-md-8 mt-4">
+                <div className="banner">
+                  <img src={PHOTO} id='FADEL' alt="Banner" />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="col-md-8 mt-4">
-            <div className="banner">
-              <img src={PHOTO} id='FADEL' alt="Banner" />
-            </div>
+            <COUNT />
+            <FLash />
+            <CATEGORY />
+            <BEST />
+            <SOWND />
+            <Explore />
+            <Arrival />
+            <SERVICES />
           </div>
         </div>
-        <COUNT />
-        <FLash />
-        <CATEGORY />
-        <BEST />
-        <SOWND />
-        <Explore />
-        <Arrival />
-        <SERVICES />
-        <FOOTER />
       </div>
-    </div>
+      <FOOTER />
     </div>
   );
 }

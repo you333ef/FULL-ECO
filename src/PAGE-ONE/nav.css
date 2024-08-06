@@ -1,40 +1,52 @@
 .navbar {
-  position: relative; /* تأكد من أن الـ Navbar ليس ثابتاً */
+  position: relative;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
 }
 
 .container {
-  width: 100%; /* تأكد من أن الحاوية تمتد على عرض الصفحة بالكامل */
+  width: 100%;
 }
 
 .navbar-collapse {
   flex-grow: 1;
-  justify-content: space-between; /* تأكد من توزيع العناصر بشكل متساوي */
+  justify-content: space-between;
+  text-align: center; /* يجعل النص في الوسط */
+}
+
+.navbar-nav {
+  flex-direction: column; /* يجعل العناصر عمودية */
+  align-items: center; /* يجعل العناصر في الوسط */
 }
 
 .navbar-nav .nav-link {
   margin-right: 20px;
-  color: #000; /* تأكد من أن النص داخل الروابط باللون الأسود */
+  color: #000;
 }
 
 .form-control {
   max-width: 300px;
-  margin-right: 10px; /* تأكد من وجود مسافة بين حقل البحث والزر */
+  margin-right: 10px;
 }
 
 #Exclusive {
   font-size: 30px;
-  color: #000; /* تأكد من أن النص باللون الأسود */
+  color: #000;
 }
 
 #LL {
   font-size: 16px;
   font-weight: 700;
-  color: #000; /* تأكد من أن النص باللون الأسود */
+  color: #000;
 }
 
 #HEART, #CARTT {
   font-size: 22px;
-  color: #000; /* تأكد من أن الأيقونات باللون الأسود */
+  color: #000;
 }
+@media screen and (max-width: 767px) {
+.SARESH{
+  display: none;
+}
+}
+
