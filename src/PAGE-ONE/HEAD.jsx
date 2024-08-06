@@ -31,7 +31,7 @@ const HEAD = () => {
                   <a href="#" className="list-group-item list-group-item-action">Health & Beauty</a>
                 </div>
               </div>
-              <div className="col-md-8 mt-4">
+              <div className="col-md-8  mt-4" id='HOMME'>
                 <div className="banner">
                   <img src={PHOTO} id='FADEL' alt="Banner" />
                 </div>
