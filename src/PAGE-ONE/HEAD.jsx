@@ -48,7 +48,7 @@ const HEAD = () => {
           </div>
         </div>
       </div>
-      <FOOTER />
+     
     </div>
   );
 }

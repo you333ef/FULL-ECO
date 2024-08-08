@@ -1,0 +1,48 @@
+.KOCO {
+    padding: 20px;
+  }
+  
+  .char-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .social-icons i {
+    font-size: 18px;
+    color: #333;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons i:hover {
+    color: #DB4444; /* لون عند التحويم */
+  }
+  
+  @media (max-width: 767px) {
+    h4 {
+      font-size: 18px;
+    }
+    
+    p {
+      font-size: 12px;
+    }
+    
+    .social-icons i {
+      font-size: 16px;
+    }
+  }
+  

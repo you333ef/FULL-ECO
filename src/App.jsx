@@ -8,6 +8,8 @@ import HEAD from './PAGE-ONE/HEAD';
 import COUNT from './PAGE-ONE/COUNT';
 import CART from './PAGE-ONE/CART';
 import MYLOVE from './PAGE-ONE/MYLOVE';
+import About from './About.jsx/About';
+import FOOTER from './PAGE-ONE/FOOTER';
 
 const App = () => {
   return (
@@ -15,10 +17,13 @@ const App = () => {
       <TopNavbar />
       <NAV />
       <Routes>
-        <Route path='/' element={<HEAD />} />
+        <Route path='/HEAD' element={<HEAD />} />
         <Route path="/CART" element={<CART />} />
         <Route path="/HEART" element={<MYLOVE />} />
+        <Route path="/About" element={<About/>} />
+
       </Routes>
+      <FOOTER/>
     </BrowserRouter>
   );
 }

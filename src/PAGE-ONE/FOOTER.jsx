@@ -10,17 +10,17 @@ import GooglePlay from '../assets/FOOTER.jsx/google-play.svg';
 
 const FOOTER = () => {
   return (
-    <footer className="footer bg-light text-dark">
+    <footer className="footer  text-light">
       <div className="container">
         <div className="row VDVDVDD">
           <div className="col-md-2 col-6 mb-4">
             <h5>Exclusive</h5>
-            <p>Subscribe</p>
+            <p className='text-light'>Subscribe</p>
             <p>Get 10% off your first order</p>
             <form>
-              <div className="subscribe-form d-flex">
+              <div className="subscribe-form d-flex ">
                 <input type="email" className="form-control" placeholder="Enter your email" />
-                <button type="button" className="btn btn-danger">►</button>
+                <button type="button" className="btn BOOTN btn-dark">►</button>
               </div>
             </form>
           </div>

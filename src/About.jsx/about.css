@@ -1,0 +1,42 @@
+.container {
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  h3 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .sideOne img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .toxt{
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  @media (max-width: 767px) {
+    .sideOne {
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  

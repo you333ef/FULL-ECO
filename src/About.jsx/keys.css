@@ -1,0 +1,58 @@
+.container {
+    padding: 20px;
+  }
+  
+  .key-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .BAHEPACKK{
+    margin-top: 60px;
+  }
+ 
+  
+  .key-item h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .key-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .key-item-highlight {
+    background: #DB4444;
+    color: white;
+  }
+  
+  .key-item-highlight p {
+    color: white;
+  }
+  .key-item:hover{
+    background: #DB4444;
+    color: white;
+  }
+  @media (max-width: 767px) {
+    .key-item {
+      padding: 15px;
+    }
+  
+    .key-item img {
+      max-width: 40px;
+    }
+  
+    .key-item h4 {
+      font-size: 20px;
+    }
+  
+    .key-item p {
+      font-size: 12px;
+    }
+  }
+  

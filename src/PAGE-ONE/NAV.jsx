@@ -14,6 +14,14 @@ const NAV = () => {
   const ELQUALP = () => {
     navigate('/HEART');
   };
+  const APOUT = () => {
+    navigate('/About');
+  };
+  const HWED = () => {
+    navigate('/HEAD');
+  };
+
+
 
   return (
     <div className="container">
@@ -23,9 +31,9 @@ const NAV = () => {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0 justify-content-center w-100">
-              <Nav.Link href="#home" className="text-dark" id="LL">Home</Nav.Link>
+              <Nav.Link href="#home" onClick={HWED} className="text-dark" id="LL">Home</Nav.Link>
               <Nav.Link href="#contact" className="text-dark" id="LL">Contact</Nav.Link>
-              <Nav.Link href="#about" className="text-dark" id="LL">About</Nav.Link>
+              <Nav.Link href="#about"onClick={APOUT}  className="text-dark" id="LLAbout">About</Nav.Link>
               <Nav.Link href="#signup" className="text-dark" id="LL">Sign Up</Nav.Link>
               <Nav.Link href="#wishlist" className="text-dark d-lg-none" onClick={ELQUALP} id="LL">Heart</Nav.Link>
               <Nav.Link href="#cart" className="text-dark d-lg-none" onClick={ELTAWGEH} id="LL">Cart</Nav.Link>

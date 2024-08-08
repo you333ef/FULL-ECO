@@ -1,15 +1,22 @@
-/* footer.css */
-.footer {
+footer{
     width: 100%;
     padding: 20px;
-    background-color: #ffffff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
   }
   
   .subscribe-form input {
     border-radius: 0;
   }
-  
+  .VDVDVDD p{
+    color: #fff !important;
+  }
+.subscribe-form{
+
+}
+.BOOTN{
+  background-color: #000;
+}
   .subscribe-form button {
     border-radius: 0;
   }
@@ -37,6 +44,7 @@
 .footer a {
     text-decoration: none; /* إزالة الخطوط تحت الروابط */
     color: white; /* تعيين لون النص */
+
     font-weight: 600;
   }
   #iconttt{
@@ -50,6 +58,7 @@
   .footer a:hover {
     text-decoration: none; /* التأكد من عدم وجود خط تحت الروابط عند التحويم */
     color: lightgray; /* يمكنك تغيير لون النص عند التحويم إذا أردت */
+
   }
   
   .footer ul {
