@@ -10,6 +10,7 @@ import CART from './PAGE-ONE/CART';
 import MYLOVE from './PAGE-ONE/MYLOVE';
 import About from './About.jsx/About';
 import FOOTER from './PAGE-ONE/FOOTER';
+import SIGNUP from './SIGNUP/SIGNUP';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/CART" element={<CART />} />
         <Route path="/HEART" element={<MYLOVE />} />
         <Route path="/About" element={<About/>} />
+        <Route path="/SIGNUP" element={<SIGNUP/>} />
 
       </Routes>
       <FOOTER/>

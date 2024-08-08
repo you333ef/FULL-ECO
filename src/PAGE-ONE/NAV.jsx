@@ -20,6 +20,10 @@ const NAV = () => {
   const HWED = () => {
     navigate('/HEAD');
   };
+  const SIGN = () => {
+    navigate('/SIGNUP');
+  };
+  
 
 
 
@@ -34,7 +38,7 @@ const NAV = () => {
               <Nav.Link href="#home" onClick={HWED} className="text-dark" id="LL">Home</Nav.Link>
               <Nav.Link href="#contact" className="text-dark" id="LL">Contact</Nav.Link>
               <Nav.Link href="#about"onClick={APOUT}  className="text-dark" id="LLAbout">About</Nav.Link>
-              <Nav.Link href="#signup" className="text-dark" id="LL">Sign Up</Nav.Link>
+              <Nav.Link href="#signup" className="text-dark"onClick={SIGN} id="LL">Sign Up</Nav.Link>
               <Nav.Link href="#wishlist" className="text-dark d-lg-none" onClick={ELQUALP} id="LL">Heart</Nav.Link>
               <Nav.Link href="#cart" className="text-dark d-lg-none" onClick={ELTAWGEH} id="LL">Cart</Nav.Link>
             </Nav>
