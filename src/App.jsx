@@ -11,6 +11,8 @@ import MYLOVE from './PAGE-ONE/MYLOVE';
 import About from './About.jsx/About';
 import FOOTER from './PAGE-ONE/FOOTER';
 import SIGNUP from './SIGNUP/SIGNUP';
+import SECNDSIGN from './SIGNUP/SECNDSIGN';
+import Contact from './Contact';
 
 const App = () => {
   return (
@@ -23,6 +25,9 @@ const App = () => {
         <Route path="/HEART" element={<MYLOVE />} />
         <Route path="/About" element={<About/>} />
         <Route path="/SIGNUP" element={<SIGNUP/>} />
+        <Route path="/SECNDSIGN" element={<SECNDSIGN/>} />
+        <Route path="/Contact" element={<Contact/>} />
+
 
       </Routes>
       <FOOTER/>
