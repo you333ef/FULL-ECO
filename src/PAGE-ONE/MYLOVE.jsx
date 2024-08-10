@@ -1,50 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import { FaHeart, FaEye, FaStar, FaStarHalfAlt } from 'react-icons/fa';
-import './love.css'
+import { FaStar, FaEye } from 'react-icons/fa';
+import { IoIosHeart } from 'react-icons/io';
+import { SlBasketLoaded } from "react-icons/sl";
+
+import './love.css'; // تأكد من استخدام ملف الـ CSS المخصص
 
 const MYLOVE = () => {
-  const [favoriteItems, setFavoriteItems] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem('favoriteItems')) || [];
-    setFavoriteItems(storedFavorites);
+    let savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    setFavorites(savedFavorites);
   }, []);
-
-  const removeItem = (id) => {
-    const updatedFavorites = favoriteItems.filter(item => item.id !== id);
-    setFavoriteItems(updatedFavorites);
-    localStorage.setItem('favoriteItems', JSON.stringify(updatedFavorites));
-  };
 
   return (
     <div className='container'>
-      <h2>My Loved Items</h2>
+      <h2 className='my-5'>My Favorite Products</h2>
       <div className='wishlist-grid'>
-        {favoriteItems.map((item) => (
-          <div key={item.id} className='product-card'>
-            <div className="image-section">
-              <img src={item.img} alt={item.name} className='product-image' />
+        {favorites.map((product) => (
+          <div key={product.id} className='product-card  d-block m-auto'>
+            <div className="image-section ">
+              <img src={product.image} alt={product.name} className='product-image  d-block m-auto' />
               <button className="add-to-cart">Add To Cart</button>
-              <FaHeart 
-                className='heart-icon liked' 
-                onDoubleClick={() => removeItem(item.id)}
-              />
+           
+              <SlBasketLoaded className='Ruppish' />
+
               <FaEye className='eye-icon' />
             </div>
             <div className="details-section">
-              <h5>{item.name}</h5>
-              <h6>{item.price} 
-                <span> {item.oldPrice}</span>
-              </h6>
-              {[...Array(Math.floor(item.rating))].map((_, i) => <FaStar key={i} className='star' />)}
-              {item.rating % 1 !== 0 && <FaStarHalfAlt className='star' />}
-              <small>({item.reviews})</small>
+              <h5 className='NAMEEE'>{product.name}</h5>
+             
+              <h6>${product.price} <span>$160</span></h6>
+              <FaStar className='star' />
+              <FaStar className='star' />
+              <FaStar className='star' />
+              <FaStar className='star' />
+              <FaStar className='star' />
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default MYLOVE;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './explore.css';
 import { FaArrowLeft, FaArrowRight, FaHeart, FaEye, FaStar } from "react-icons/fa";
 import cameraa from '../assets/EXPLORE/CAMERA.svg';
@@ -12,9 +12,34 @@ import PLAYING from '../assets/EXPLORE/PLAYING.svg';
 import TITLE from '../assets/EXPLORE/TITLE.svg';
 
 const Explore = () => {
+  const [isFoodFavorite, setIsFoodFavorite] = useState(false);
+  const [isCameraFavorite, setIsCameraFavorite] = useState(false);
+  const [isLaptopFavorite, setIsLaptopFavorite] = useState(false);
+  const [isMarhamFavorite, setIsMarhamFavorite] = useState(false);
+  const [isCarFavorite, setIsCarFavorite] = useState(false);
+  const [isKotsheFavorite, setIsKotsheFavorite] = useState(false);
+  const [isPlayingFavorite, setIsPlayingFavorite] = useState(false);
+  const [isJacketFavorite, setIsJacketFavorite] = useState(false);
+
+  useEffect(() => {
+    setIsFoodFavorite(JSON.parse(localStorage.getItem('isFoodFavorite')) || false);
+    setIsCameraFavorite(JSON.parse(localStorage.getItem('isCameraFavorite')) || false);
+    setIsLaptopFavorite(JSON.parse(localStorage.getItem('isLaptopFavorite')) || false);
+    setIsMarhamFavorite(JSON.parse(localStorage.getItem('isMarhamFavorite')) || false);
+    setIsCarFavorite(JSON.parse(localStorage.getItem('isCarFavorite')) || false);
+    setIsKotsheFavorite(JSON.parse(localStorage.getItem('isKotsheFavorite')) || false);
+    setIsPlayingFavorite(JSON.parse(localStorage.getItem('isPlayingFavorite')) || false);
+    setIsJacketFavorite(JSON.parse(localStorage.getItem('isJacketFavorite')) || false);
+  }, []);
+
+  const toggleFavorite = (favoriteState, setFavoriteState, storageKey) => {
+    const newStatus = !favoriteState;
+    setFavoriteState(newStatus);
+    localStorage.setItem(storageKey, JSON.stringify(newStatus));
+  };
+
   return (
     <div className="container mt-5">
-     
       <div className="row RwwwRwww">
         <div className="col">
           <div className="RIGHT">
@@ -25,8 +50,8 @@ const Explore = () => {
           </div>
         </div>
         <div className="col d-block text-end" id='DIRECTIONS'>
-        <button className="btn btn-outline-dark"><FaArrowLeft /></button>
-        <button className="btn btn-outline-dark"><FaArrowRight /></button>
+          <button className="btn btn-outline-dark"><FaArrowLeft /></button>
+          <button className="btn btn-outline-dark"><FaArrowRight /></button>
         </div>
       </div>
       <div className="row mt-4">
@@ -38,13 +63,18 @@ const Explore = () => {
               <p className="card-text">$100</p>
               <p className="card-text"><FaStar /> 3.5 (35 reviews)</p>
               <div className="d-flex justify-content-between">
-                <button className="btn btn-outline-danger"><FaHeart /></button>
+                <button
+                  className={`btn ${isFoodFavorite ? 'btn-danger' : 'btn-outline-danger'}`}
+                  onClick={() => toggleFavorite(isFoodFavorite, setIsFoodFavorite, 'isFoodFavorite')}
+                >
+                  <FaHeart />
+                </button>
                 <button className="btn btn-outline-secondary"><FaEye /></button>
               </div>
             </div>
           </div>
         </div>
-       
+
         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
           <div className="card">
             <img src={cameraa} className="card-img-top d-block m-auto" alt="Product Image" />
@@ -53,12 +83,18 @@ const Explore = () => {
               <p className="card-text">$360</p>
               <p className="card-text"><FaStar /> 4.5 (95 reviews)</p>
               <div className="d-flex justify-content-between">
-                <button className="btn btn-outline-danger"><FaHeart /></button>
+                <button
+                  className={`btn ${isCameraFavorite ? 'btn-danger' : 'btn-outline-danger'}`}
+                  onClick={() => toggleFavorite(isCameraFavorite, setIsCameraFavorite, 'isCameraFavorite')}
+                >
+                  <FaHeart />
+                </button>
                 <button className="btn btn-outline-secondary"><FaEye /></button>
               </div>
             </div>
           </div>
         </div>
+
         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
           <div className="card">
             <img src={LAPTOP} className="card-img-top d-block m-auto" alt="Product Image" />
@@ -67,12 +103,18 @@ const Explore = () => {
               <p className="card-text">$700</p>
               <p className="card-text"><FaStar /> 5.0 (325 reviews)</p>
               <div className="d-flex justify-content-between">
-                <button className="btn btn-outline-danger"><FaHeart /></button>
+                <button
+                  className={`btn ${isLaptopFavorite ? 'btn-danger' : 'btn-outline-danger'}`}
+                  onClick={() => toggleFavorite(isLaptopFavorite, setIsLaptopFavorite, 'isLaptopFavorite')}
+                >
+                  <FaHeart />
+                </button>
                 <button className="btn btn-outline-secondary"><FaEye /></button>
               </div>
             </div>
           </div>
         </div>
+
         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
           <div className="card">
             <img src={MARHAM} className="card-img-top d-block m-auto" alt="Product Image" />
@@ -81,12 +123,18 @@ const Explore = () => {
               <p className="card-text">$500</p>
               <p className="card-text"><FaStar /> 4.0 (145 reviews)</p>
               <div className="d-flex justify-content-between">
-                <button className="btn btn-outline-danger"><FaHeart /></button>
+                <button
+                  className={`btn ${isMarhamFavorite ? 'btn-danger' : 'btn-outline-danger'}`}
+                  onClick={() => toggleFavorite(isMarhamFavorite, setIsMarhamFavorite, 'isMarhamFavorite')}
+                >
+                  <FaHeart />
+                </button>
                 <button className="btn btn-outline-secondary"><FaEye /></button>
               </div>
             </div>
           </div>
         </div>
+
         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
           <div className="card">
             <img src={CAR} className="card-img-top d-block m-auto" alt="Product Image" />
@@ -95,12 +143,18 @@ const Explore = () => {
               <p className="card-text">$960</p>
               <p className="card-text"><FaStar /> 5.0 (65 reviews)</p>
               <div className="d-flex justify-content-between">
-                <button className="btn btn-outline-danger"><FaHeart /></button>
+                <button
+                  className={`btn ${isCarFavorite ? 'btn-danger' : 'btn-outline-danger'}`}
+                  onClick={() => toggleFavorite(isCarFavorite, setIsCarFavorite, 'isCarFavorite')}
+                >
+                  <FaHeart />
+                </button>
                 <button className="btn btn-outline-secondary"><FaEye /></button>
               </div>
             </div>
           </div>
         </div>
+
         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
           <div className="card">
             <img src={KOTSHE} className="card-img-top d-block m-auto" alt="Product Image" />
@@ -109,44 +163,60 @@ const Explore = () => {
               <p className="card-text">$1160</p>
               <p className="card-text"><FaStar /> 5.0 (35 reviews)</p>
               <div className="d-flex justify-content-between">
-                <button className="btn btn-outline-danger"><FaHeart /></button>
+                <button
+                  className={`btn ${isKotsheFavorite ? 'btn-danger' : 'btn-outline-danger'}`}
+                  onClick={() => toggleFavorite(isKotsheFavorite, setIsKotsheFavorite, 'isKotsheFavorite')}
+                >
+                  <FaHeart />
+                </button>
                 <button className="btn btn-outline-secondary"><FaEye /></button>
               </div>
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div className="card">
-            <img src={PLAYING} className="card-img-top d-block m-auto" alt="Product Image" />
-            <div className="card-body">
-              <h5 className="card-title">GP11 Shooter USB Gamepad</h5>
-              <p className="card-text">$660</p>
-              <p className="card-text"><FaStar /> 4.5 (55 reviews)</p>
-              <div className="d-flex justify-content-between">
-                <button className="btn btn-outline-danger"><FaHeart /></button>
-                <button className="btn btn-outline-secondary"><FaEye /></button>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
           <div className="card">
             <img src={jackettt} className="card-img-top d-block m-auto" alt="Product Image" />
             <div className="card-body">
-              <h5 className="card-title">Quilted Satin Jacket</h5>
-              <p className="card-text">$660</p>
-              <p className="card-text"><FaStar /> 4.5 (55 reviews)</p>
+              <h5 className="card-title">Winter Jacket</h5>
+              <p className="card-text">$120</p>
+              <p className="card-text"><FaStar /> 4.5 (150 reviews)</p>
               <div className="d-flex justify-content-between">
-                <button className="btn btn-outline-danger"><FaHeart /></button>
+                <button
+                  className={`btn ${isJacketFavorite ? 'btn-danger' : 'btn-outline-danger'}`}
+                  onClick={() => toggleFavorite(isJacketFavorite, setIsJacketFavorite, 'isJacketFavorite')}
+                >
+                  <FaHeart />
+                </button>
+                <button className="btn btn-outline-secondary"><FaEye /></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div className="card">
+            <img src={PLAYING} className="card-img-top d-block m-auto" alt="Product Image" />
+            <div className="card-body">
+              <h5 className="card-title">Gaming Console</h5>
+              <p className="card-text">$450</p>
+              <p className="card-text"><FaStar /> 4.0 (200 reviews)</p>
+              <div className="d-flex justify-content-between">
+                <button
+                  className={`btn ${isPlayingFavorite ? 'btn-danger' : 'btn-outline-danger'}`}
+                  onClick={() => toggleFavorite(isPlayingFavorite, setIsPlayingFavorite, 'isPlayingFavorite')}
+                >
+                  <FaHeart />
+                </button>
                 <button className="btn btn-outline-secondary"><FaEye /></button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <button className="btn btn-danger d-block mx-auto">View All Products</button>
     </div>
   );
-}
+};
 
 export default Explore;
