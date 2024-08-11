@@ -75,3 +75,42 @@ th, td {
   border: none;
   cursor: pointer;
 }
+
+.cart-container {
+  padding: 20px;
+  
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.quantity-input {
+  width: 60px;
+}
+
+.cart-summary {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .cart-summary {
+    text-align: right;
+  }
+
+  .cart-container {
+    padding: 10px;
+  }
+
+  .quantity-input {
+    width: 100%;
+  }
+}
+#NAMEITEM{
+  font-size: 14px;
+  font-weight: 700;
+}
+#Product_Cart{
+  font-size: 25px;
+  font-weight: 700;
+}
