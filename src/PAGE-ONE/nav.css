@@ -33,10 +33,22 @@
   font-size: 30px;
   color: #000;
 }
+.BO{
+  display: flex;flex-direction: row;
+}
+.BO small{
+  color: #000;
+  font-weight: 700;
+  color: #DB4444;
+}
+.BO #HEART{
+  color: #DB4444 !important;
+}
 
 #LL {
   font-size: 16px;
   font-weight: 700;
+ 
   color: #000;
 }
 

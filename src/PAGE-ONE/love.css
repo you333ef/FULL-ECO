@@ -94,3 +94,63 @@
 .star {
   color: #f0ad4e;
 }
+.wishlist-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* لكل شاشتين جنب بعض */
+}
+
+@media (max-width: 768px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+.wishlist-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr); /* 3 أعمدة افتراضية لشاشات اللابتوب */
+}
+.BBBBBH{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.Wishlist{
+  font-size: 22px;
+  font-weight: 700;
+}
+.All{
+  width: 150px !important;
+  background-color: #000;
+} 
+
+
+
+@media (max-width: 768px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 أعمدة للشاشات المتوسطة والصغيرة */
+  }
+}
+
+@media (max-width: 580px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 أعمدة للشاشات الأقل من 580 بكسل */
+  }
+}
+
+@media (max-width: 400px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr; /* عمود واحد للشاشات الأصغر مثل الأجهزة المحمولة */
+  }
+}
+
+
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}

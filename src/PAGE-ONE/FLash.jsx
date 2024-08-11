@@ -68,6 +68,12 @@ const Flash = () => {
     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   };
 
+  const handleAddToCart = (product) => {
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItems.push(product);
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+  };
+
   return (
     <div className='container'>
       <Slider {...settings}>
@@ -76,7 +82,9 @@ const Flash = () => {
           <div className="ELSORA-PEHWARTHA">
             <img src={Discountpercent} alt="" className='DISCOUNT' id='DISCOUNT' />
             <img src={PLAYSTATION} alt='HAVIT HV-G92 Gamepad' className='ELSORA-PEHWARTHA' />
-            <button className="add-to-cart">Add To Cart</button>
+            <button className="add-to-cart" onClick={() => handleAddToCart({ id: 1, name: "HAVIT HV-G92 Gamepad", price: 120, image: PLAYSTATION })}>
+              Add To Cart
+            </button>
             <IoIosHeart 
               onClick={() => handleFavoriteClick({ id: 1, name: "HAVIT HV-G92 Gamepad", price: 120, image: PLAYSTATION })}
               className='HEART'
@@ -100,7 +108,9 @@ const Flash = () => {
           <div className="ELSORA-PEHWARTHA">
             <img src={Discountpercent} alt="" className='DISCOUNT' />
             <img src={KEYBOARD} alt='AK-900 Wired Keyboard' className='ELSORA-PEHWARTHA KEYPORRD' />
-            <button className="add-to-cart">Add To Cart</button>
+            <button className="add-to-cart" onClick={() => handleAddToCart({ id: 2, name: "AK-900 Wired Keyboard", price: 120, image: KEYBOARD })}>
+              Add To Cart
+            </button>
             <IoIosHeart 
               onClick={() => handleFavoriteClick({ id: 2, name: "AK-900 Wired Keyboard", price: 120, image: KEYBOARD })}
               className='HEART'
@@ -124,7 +134,9 @@ const Flash = () => {
           <div className="ELSORA-PEHWARTHA">
             <img src={Discountpercent} alt="" className='DISCOUNT' />
             <img src={SCREEN} alt='IPS LCD Gaming Monitor' className='ELSORA-PEHWARTHA' />
-            <button className="add-to-cart">Add To Cart</button>
+            <button className="add-to-cart" onClick={() => handleAddToCart({ id: 3, name: "IPS LCD Gaming Monitor", price: 120, image: SCREEN })}>
+              Add To Cart
+            </button>
             <IoIosHeart 
               onClick={() => handleFavoriteClick({ id: 3, name: "IPS LCD Gaming Monitor", price: 120, image: SCREEN })}
               className='HEART'
@@ -148,7 +160,9 @@ const Flash = () => {
           <div className="ELSORA-PEHWARTHA">
             <img src={Discountpercent} alt="" className='DISCOUNT' />
             <img src={CHAIR} alt='S-Series Comfort Chair' className='ELSORA-PEHWARTHA' />
-            <button className="add-to-cart">Add To Cart</button>
+            <button className="add-to-cart" onClick={() => handleAddToCart({ id: 4, name: "S-Series Comfort Chair", price: 120, image: CHAIR })}>
+              Add To Cart
+            </button>
             <IoIosHeart 
               onClick={() => handleFavoriteClick({ id: 4, name: "S-Series Comfort Chair", price: 120, image: CHAIR })}
               className='HEART'
