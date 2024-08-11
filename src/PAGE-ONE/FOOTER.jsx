@@ -55,10 +55,10 @@ const FOOTER = () => {
             <h5>Download App</h5>
             <p>Save $3 with App New User Only</p>
             <div className="d-flex flex-column flex-md-row align-items-center">
-              <img src={barCode} alt="QR Code" className="qr-code img-fluid mb-3 mb-md-0" />
+              <img src={barCode} alt="QR Code" id='QR' className="qr-code img-fluid mb-3 mb-md-0 " />
               <div className="ml-md-3 KKK">
-                <img src={GooglePlay} alt="Google Play" className="app-store img-fluid" />
-                <img src={APPSTORE} alt="App Store" className="app-store img-fluid mt-2" />
+                <img src={GooglePlay} alt="Google Play" className="app-store img-fluid" id='GooglePlay' />
+                <img src={APPSTORE} alt="App Store" className="app-store img-fluid mt-2" id='APPSTORE' />
               </div>
             </div>
             <div className="social-icons  mt-3">

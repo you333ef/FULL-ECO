@@ -12,6 +12,8 @@ import FOOTER from './PAGE-ONE/FOOTER';
 import SIGNUP from './SIGNUP/SIGNUP';
 import SECNDSIGN from './SIGNUP/SECNDSIGN';
 import Contact from './Contact';
+import BILDING from './PAGE-ONE/BILDING';
+import NotFound from './PAGE-ONE/NotFound';
 
 const App = () => {
   const [favorites, setFavorites] = useState([]);
@@ -38,13 +40,17 @@ const App = () => {
       <TopNavbar />
       <NAV favorites={favorites} />
       <Routes>
-        <Route path='/HEAD' element={<HEAD addToFavorites={addToFavorites} />} />
+
+        <Route path='/' element={<HEAD addToFavorites={addToFavorites} />} />
         <Route path="/CART" element={<CART />} />
         <Route path="/HEART" element={<MYLOVE favorites={favorites} removeFavorite={removeFavorite} />} />
         <Route path="/About" element={<About />} />
         <Route path="/SIGNUP" element={<SIGNUP />} />
         <Route path="/SECNDSIGN" element={<SECNDSIGN />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/BILDING" element={<BILDING/>} />
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
       <FOOTER />
     </BrowserRouter>

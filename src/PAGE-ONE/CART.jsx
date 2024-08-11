@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import  './cart.css'
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const CART = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -9,6 +10,10 @@ const CART = () => {
     const savedCartItems = JSON.parse(localStorage.getItem('cart')) || [];
     setCartItems(savedCartItems);
   }, []);
+  let Nagaghy=useNavigate();
+  const ELTAWGEH = () => {
+    Nagaghy('/BILDING');
+  };
 
   const handleQuantityChange = (index, newQuantity) => {
     if (newQuantity > 0) {
@@ -41,7 +46,7 @@ const CART = () => {
       <h1 className='text-start' id='Product_Cart'>Product Cart</h1>
       {cartItems.length > 0 ? (
         <Row>
-          <Col lg={8} md={7} >
+          <Col lg={8} md={7}   >
             <table className="table  d-block m-auto">
               <thead>
                 <tr>
@@ -56,7 +61,7 @@ const CART = () => {
                 {cartItems.map((item, index) => (
                   <tr key={index}>
                     <td>
-                      <img src={item.image} className='d-block m-auto' alt={item.name} width="80" />
+                      <img src={item.image} className='d-block m-auto' alt={item.name} width="70" />
                      <p id='NAMEITEM' className='text-center'>{item.name}</p>
                     </td>
                     <td  className='BBBKKK '>${item.price}</td>
@@ -89,12 +94,12 @@ const CART = () => {
               <p className='text-center'>Subtotal: ${calculateTotal()}</p>
               <p className='text-center'>Shipping: Free</p>
               <h2 id='FUMMTOTAL' className='text-center'>Total: ${calculateTotal()}</h2>
-              <Button variant="danger" className="w-100 text-center">Proceed to Checkout</Button>
+              <Button variant="danger" className="w-100 text-center"onClick={ELTAWGEH}>Proceed to Checkout</Button>
             </div>
           </Col>
         </Row>
       ) : (
-        <p>العربية فاضية حالياً.</p>
+        <p className='text-center EMPTY'>The Cart is Empty</p>
       )}
     </Container>
   );

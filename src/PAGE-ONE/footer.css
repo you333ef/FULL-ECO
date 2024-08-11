@@ -83,13 +83,71 @@ footer{
         text-align: center;
 
       }
+     
+    
+  }
+  @media screen and (min-width: 767px) {
+    #APPSTORE,#GooglePlay{
+      display: none;
+    }
+    
   }
   
   .footer {
     padding-left: 0 !important; /* أو القيمة اللي تحبها */
   }
-  .KKK{
-    display: flex;
-    flex-direction: column;
+ 
+  @media screen and (max-width: 1024px) {
+    .subscribe-form{
+      display: flex;
+      justify-content: center;
+            }
+            .social-icons  {
+              display: block;
+              margin-right: auto;
+              margin-left: auto;
+              justify-content: center;
+              text-align: center;
+      
+            }
+            #QR{
+              display: flex;
+              justify-content: center;
+              display: block;
+              margin: auto;
+            }
+    .footer .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .KKK{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .footer .row {
+      flex-direction: column;
+    }
+  
+    .footer .col-md-2, .footer .col-md-4 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  
+    .KKK {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .qr-code, .app-store {
+      margin: 0 auto;
+    }
   }
   
