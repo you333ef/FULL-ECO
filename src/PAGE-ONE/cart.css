@@ -1,0 +1,51 @@
+#FUMMTOTAL{
+    font-size: 18px;
+    font-weight: 700;
+}
+/* الكود الأساسي */
+.cart-container {
+    width: 100%; /* خلي العرض يكون 100% من الشاشة */
+    max-width: 800px; /* خلي أقصى عرض 800 بكسل */
+    margin: 0 auto;
+    padding: 0 15px; /* خلي فيه مسافة من الجوانب */
+    box-sizing: border-box;
+}
+
+/* تعديل الجدول */
+.cart-table {
+    width: 100%;
+    overflow-x: auto; /* إضافة خاصية التحريك الأفقي في حالة ضيق الجدول */
+}
+
+.cart-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* تعديل العناصر الداخلية */
+.cart-summary {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.quantity-input {
+    width: 60px;
+    max-width: 100%; /* خلي العرض يستجيب لحجم الشاشة */
+}
+
+/* بالنسبة للشاشات الصغيرة */
+@media (max-width: 580px) {
+  .cart-summary {
+    padding: 10px; /* خلي الـ padding أصغر شوية */
+  }
+
+  .cart-table table {
+    font-size: 14px; /* خلي حجم الخط أصغر لتناسب الجدول مع المساحة */
+  }
+
+  .quantity-input {
+    width: 50px; /* خلي عرض الـ input ثابت */
+  }
+}

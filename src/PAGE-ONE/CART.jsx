@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import  './cart.css'
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 
 const CART = () => {
@@ -40,8 +41,8 @@ const CART = () => {
       <h1 className='text-start' id='Product_Cart'>Product Cart</h1>
       {cartItems.length > 0 ? (
         <Row>
-          <Col lg={8} md={7}>
-            <table className="table">
+          <Col lg={8} md={7} >
+            <table className="table  d-block m-auto">
               <thead>
                 <tr>
                   <th>Product</th>
@@ -58,7 +59,7 @@ const CART = () => {
                       <img src={item.image} className='d-block m-auto' alt={item.name} width="80" />
                      <p id='NAMEITEM' className='text-center'>{item.name}</p>
                     </td>
-                    <td >${item.price}</td>
+                    <td  className='BBBKKK '>${item.price}</td>
                     <td>
                       <Form.Control
                         type="number"
@@ -87,7 +88,7 @@ const CART = () => {
               <h3 className='text-center'>Cart Total</h3>
               <p className='text-center'>Subtotal: ${calculateTotal()}</p>
               <p className='text-center'>Shipping: Free</p>
-              <h2>Total: ${calculateTotal()}</h2>
+              <h2 id='FUMMTOTAL' className='text-center'>Total: ${calculateTotal()}</h2>
               <Button variant="danger" className="w-100 text-center">Proceed to Checkout</Button>
             </div>
           </Col>

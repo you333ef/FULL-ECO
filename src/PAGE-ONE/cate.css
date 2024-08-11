@@ -45,8 +45,8 @@
 }
  /*  */
  .cart-container {
-  padding: 20px;
-  max-width: 800px;
+ 
+ width: 800px;
   margin: 0 auto;
 }
 
@@ -76,10 +76,7 @@ th, td {
   cursor: pointer;
 }
 
-.cart-container {
-  padding: 20px;
-  
-}
+
 
 .table th, .table td {
   vertical-align: middle;
@@ -105,6 +102,12 @@ th, td {
   .quantity-input {
     width: 100%;
   }
+  #NAMEITEM{
+    display: none;
+  }
+}
+.BBBKKK{
+  font-weight: 700;
 }
 #NAMEITEM{
   font-size: 14px;
@@ -114,3 +117,5 @@ th, td {
   font-size: 25px;
   font-weight: 700;
 }
+/*  */
+
